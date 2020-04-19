@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+
+class_number = int(input("Enter a Class: "))
+password = input("Please enter a password: ")
+defaultpassword={1:"one",2:"two",3:"three",4:"four",5:"five",6:"six",7:"seven",8:"eight",9:"nine",10:"ten",11:"eleven",12:"twelve"}
+if class_number in defaultpassword.keys():
+  if defaultpassword.get(class_number)==password:
+    print("Login Successful")
+  else:
+    print("Login failed")
+    exit(1)
+name=input("Enter Student Name: ")
+Rollnumber=int(input("Enter student Rollnumber:"))
+if class_number==1:
+    class_one={"English":0,"Hindi":0,"Moral Science":0}
+    for y in class_one.keys():
+        class_one['English']=int(input("Enter marks of {}".format(y)))
+        class_one['Hindi']=int(input("Enter marks of {}".format(y)))
+        class_one['Moral Science']=int(input("Enter marks of {}".format(y)))
